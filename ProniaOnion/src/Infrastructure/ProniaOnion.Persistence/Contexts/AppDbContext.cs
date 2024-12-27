@@ -3,6 +3,7 @@ using ProniaOnion.Domain.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -16,6 +17,12 @@ namespace ProniaOnion.Persistence.Contexts
         public DbSet<Category> Categories { get; set; }
         public DbSet<ProductColor> ProductColors { get; set; }
         public DbSet<Color> Colors { get; set; }
-       
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
+            base.OnModelCreating(modelBuilder);
+        }
+
     }
 }
