@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\pc\\OneDrive\\Masaüstü\\ProniaOnion.API\\ProniaOnion\\src\\Core\\ProniaOnion.Domain\\ProniaOnion.Domain.csproj",
-      "projectName": "ProniaOnion.Domain",
-      "projectPath": "C:\\Users\\pc\\OneDrive\\Masaüstü\\ProniaOnion.API\\ProniaOnion\\src\\Core\\ProniaOnion.Domain\\ProniaOnion.Domain.csproj",
+      "projectUniqueName": "C:\\Users\\pc\\OneDrive\\Masaüstü\\ProniaOnion.API\\ProniaOnion\\src\\Infrastructure\\ProniaOnion.Infrastructure\\ProniaOnion.Infrastructure.csproj",
+      "projectName": "ProniaOnion.Infrastructure",
+      "projectPath": "C:\\Users\\pc\\OneDrive\\Masaüstü\\ProniaOnion.API\\ProniaOnion\\src\\Infrastructure\\ProniaOnion.Infrastructure\\ProniaOnion.Infrastructure.csproj",
       "packagesPath": "C:\\Users\\pc\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\pc\\OneDrive\\Masaüstü\\ProniaOnion.API\\ProniaOnion\\src\\Core\\ProniaOnion.Domain\\obj\\",
+      "outputPath": "C:\\Users\\pc\\OneDrive\\Masaüstü\\ProniaOnion.API\\ProniaOnion\\src\\Infrastructure\\ProniaOnion.Infrastructure\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\pc\\AppData\\Roaming\\NuGet\\NuGet.Config",

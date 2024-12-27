@@ -32,11 +32,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\pc\\source\\repos\\ProniaOnion\\src\\Core\\ProniaOnion.Application\\ProniaOnion.Application.csproj",
+      "projectUniqueName": "C:\\Users\\pc\\OneDrive\\Masaüstü\\ProniaOnion.API\\ProniaOnion\\src\\Core\\ProniaOnion.Application\\ProniaOnion.Application.csproj",
       "projectName": "ProniaOnion.Application",
-      "projectPath": "C:\\Users\\pc\\source\\repos\\ProniaOnion\\src\\Core\\ProniaOnion.Application\\ProniaOnion.Application.csproj",
+      "projectPath": "C:\\Users\\pc\\OneDrive\\Masaüstü\\ProniaOnion.API\\ProniaOnion\\src\\Core\\ProniaOnion.Application\\ProniaOnion.Application.csproj",
       "packagesPath": "C:\\Users\\pc\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\pc\\source\\repos\\ProniaOnion\\src\\Core\\ProniaOnion.Application\\obj\\",
+      "outputPath": "C:\\Users\\pc\\OneDrive\\Masaüstü\\ProniaOnion.API\\ProniaOnion\\src\\Core\\ProniaOnion.Application\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\pc\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -54,8 +54,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\pc\\source\\repos\\ProniaOnion\\src\\Core\\ProniaOnion.Domain\\ProniaOnion.Domain.csproj": {
-              "projectPath": "C:\\Users\\pc\\source\\repos\\ProniaOnion\\src\\Core\\ProniaOnion.Domain\\ProniaOnion.Domain.csproj"
+            "C:\\Users\\pc\\OneDrive\\Masaüstü\\ProniaOnion.API\\ProniaOnion\\src\\Core\\ProniaOnion.Domain\\ProniaOnion.Domain.csproj": {
+              "projectPath": "C:\\Users\\pc\\OneDrive\\Masaüstü\\ProniaOnion.API\\ProniaOnion\\src\\Core\\ProniaOnion.Domain\\ProniaOnion.Domain.csproj"
             }
           }
         }
