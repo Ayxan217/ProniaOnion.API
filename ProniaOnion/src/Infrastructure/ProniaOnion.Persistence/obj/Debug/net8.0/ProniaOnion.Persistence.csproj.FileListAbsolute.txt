@@ -16,3 +16,5 @@ C:\Users\pc\OneDrive\Masaüstü\ProniaOnion.API\ProniaOnion\src\Infrastructure\P
 C:\Users\pc\OneDrive\Masaüstü\ProniaOnion.API\ProniaOnion\src\Infrastructure\ProniaOnion.Persistence\obj\Debug\net8.0\ProniaOnion.Persistence.pdb
 C:\Users\pc\OneDrive\Masaüstü\ProniaOnion.API\ProniaOnion\src\Infrastructure\ProniaOnion.Persistence\obj\Debug\net8.0\ProniaOnion.Persistence.genruntimeconfig.cache
 C:\Users\pc\OneDrive\Masaüstü\ProniaOnion.API\ProniaOnion\src\Infrastructure\ProniaOnion.Persistence\obj\Debug\net8.0\ref\ProniaOnion.Persistence.dll
+C:\Users\pc\OneDrive\Masaüstü\ProniaOnion.API\ProniaOnion\src\Infrastructure\ProniaOnion.Persistence\bin\Debug\net8.0\ProniaOnion.Application.dll
+C:\Users\pc\OneDrive\Masaüstü\ProniaOnion.API\ProniaOnion\src\Infrastructure\ProniaOnion.Persistence\bin\Debug\net8.0\ProniaOnion.Application.pdb
