@@ -66,9 +66,9 @@
         "IsRequired": true
       },
       {
-        "Name": "Name",
-        "Type": "System.String",
-        "IsRequired": false
+        "Name": "categoryDto",
+        "Type": "ProniaOnion.Application.DTOs.Categories.UpdateCategoryDto",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []
