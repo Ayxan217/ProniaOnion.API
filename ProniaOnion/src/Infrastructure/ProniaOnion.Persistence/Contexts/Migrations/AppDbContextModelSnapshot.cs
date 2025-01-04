@@ -138,6 +138,32 @@ namespace ProniaOnion.Persistence.Contexts.Migrations
                     b.ToTable("ProductColors");
                 });
 
+            modelBuilder.Entity("ProniaOnion.Domain.Entities.Tag", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime>("ModifiedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Tags");
+                });
+
             modelBuilder.Entity("ProniaOnion.Domain.Entities.Product", b =>
                 {
                     b.HasOne("ProniaOnion.Domain.Entities.Category", "Category")

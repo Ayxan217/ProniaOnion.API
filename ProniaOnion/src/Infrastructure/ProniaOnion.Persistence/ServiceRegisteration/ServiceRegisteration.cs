@@ -22,10 +22,12 @@ namespace ProniaOnion.Persistence.ServiceRegisteration
         {
             services.AddDbContext<AppDbContext>(opt => opt.UseSqlServer(configuration.GetConnectionString("Default")));
             services.AddScoped<ICategoryRepository, CategoryRepository>();
+            services.AddScoped<ICategoryService, CategoryService>();
             services.AddScoped<IColorRepository, ColorRepository>();
             services.AddScoped<IProductRepository, ProductRepository>();
+            services.AddScoped<ITagService, TagService>();
+            services.AddScoped<ITagRepository, TagRepository>();
             
-            services.AddScoped<ICategoryService, CategoryService>();
             return services;
         }
     }
