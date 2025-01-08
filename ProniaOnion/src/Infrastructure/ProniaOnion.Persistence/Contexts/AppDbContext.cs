@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using ProniaOnion.Domain.Entities;
+using ProniaOnion.Persistence.Common;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,7 +24,31 @@ namespace ProniaOnion.Persistence.Contexts
         {
             modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
             base.OnModelCreating(modelBuilder);
+
+            modelBuilder.ApplyQueryFilter();
         }
+
+        public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
+        {
+            var data = ChangeTracker.Entries<BaseEntity>();
+            foreach (var entry in data)
+            {
+                switch(entry.State)
+                {
+                    case EntityState.Modified:
+                        entry.Entity.ModifiedAt = DateTime.Now;
+                        break;
+                    case EntityState.Added:
+                        entry.Entity.CreatedBy = "Admin";
+                        entry.Entity.ModifiedAt = DateTime.Now;
+                        entry.Entity.ModifiedAt = DateTime.Now;
+                        break;
+                }
+            }
+            return base.SaveChangesAsync(cancellationToken);
+        }
+
+
 
     }
 }

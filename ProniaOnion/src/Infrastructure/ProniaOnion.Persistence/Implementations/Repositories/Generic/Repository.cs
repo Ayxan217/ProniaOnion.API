@@ -39,6 +39,7 @@ namespace ProniaOnion.Persistence.Implementations.Repositories.Generic
             int take = 0,
             bool isDecending = false,
             bool isTracking = false,
+            bool ignoreQuery = false,
             params string[]? includes
             )
         {
@@ -47,14 +48,14 @@ namespace ProniaOnion.Persistence.Implementations.Repositories.Generic
 
             if (includes is not null) query = _getIncludes(query, includes);
 
-
-
             if (orderExpression is not null)
             {
                 if (isDecending) query = query.OrderByDescending(orderExpression);
 
                 else query = query.OrderBy(orderExpression);
             }
+
+            if(ignoreQuery) query = query.IgnoreQueryFilters();
 
             query = query.Skip(skip);
 

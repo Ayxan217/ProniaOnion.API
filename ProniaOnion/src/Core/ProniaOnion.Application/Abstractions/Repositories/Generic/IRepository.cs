@@ -17,6 +17,7 @@ namespace ProniaOnion.Application.Abstractions.Repositories.Generic
     int take = 0,
     bool isDecending = false,
     bool isTracking = false,
+    bool ignoreQuery = false,
     params string[]? includes);
         Task<T> GetByIdAsync(int id, params string[] includes);
         Task AddAsync(T entity);
