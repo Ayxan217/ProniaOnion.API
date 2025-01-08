@@ -28,7 +28,7 @@ namespace ProniaOnion.Persistence.Implementations.Services
 
             public async Task CreateAsync(CreateCategoryDto categoryDto)
             {
-                if (await _categoryRepository.AnyAsync(c => c.Name == categoryDto.Name)) throw new Exception("Alredy Exists");
+                //if (await _categoryRepository.AnyAsync(c => c.Name == categoryDto.Name)) throw new Exception("Alredy Exists");
 
                var category = _mapper.Map<Category>(categoryDto);
                category.CreatedAt = DateTime.Now;
@@ -70,7 +70,7 @@ namespace ProniaOnion.Persistence.Implementations.Services
             if (category is null)
                 throw new Exception("not found");
 
-           
+
             bool exists = await _categoryRepository
                 .AnyAsync(c => c.Name == categoryDto.Name && c.Id != id);
 
@@ -79,7 +79,7 @@ namespace ProniaOnion.Persistence.Implementations.Services
                 throw new Exception(" already exists");
             }
 
-            
+
             _mapper.Map(categoryDto, category);
 
             category.ModifiedAt = DateTime.Now;

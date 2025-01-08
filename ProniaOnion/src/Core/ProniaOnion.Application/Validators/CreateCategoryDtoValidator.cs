@@ -18,8 +18,9 @@ namespace ProniaOnion.Application.Validators
            _repository = repository;
 
             RuleFor(c => c.Name).NotEmpty().WithMessage("data must not be empty")
-                .MaximumLength(100).Matches("^[A-Za-z\\s0-9]*$");
-                //.MustAsync(CheckName);
+                .MaximumLength(100).Matches("^[A-Za-z\\s0-9]*$")
+                .MustAsync(CheckName)
+                .WithMessage("Name Already exists");
         }
 
         private async Task<bool> CheckName(string name,CancellationToken token)
