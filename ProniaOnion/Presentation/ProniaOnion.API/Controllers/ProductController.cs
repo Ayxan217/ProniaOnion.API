@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using ProniaOnion.Application.Abstractions.Services;
+using ProniaOnion.Application.DTOs.Products;
 
 namespace ProniaOnion.API.Controllers
 {
@@ -27,5 +28,11 @@ namespace ProniaOnion.API.Controllers
             return Ok(await _service.GetByIdAsync(id));
         }
 
+
+        //[HttpPost]
+        //public async Task<IActionResult> Post([FromForm] CreateProductDto productDto)
+        //{
+
+        //}
     }
 }

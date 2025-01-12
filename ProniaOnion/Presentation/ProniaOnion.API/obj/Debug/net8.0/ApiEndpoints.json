@@ -178,5 +178,42 @@
       }
     ],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProniaOnion.API.Controllers.ProductController",
+    "Method": "Get",
+    "RelativePath": "Product",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "page",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "take",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ProniaOnion.API.Controllers.ProductController",
+    "Method": "Get",
+    "RelativePath": "Product/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
   }
 ]

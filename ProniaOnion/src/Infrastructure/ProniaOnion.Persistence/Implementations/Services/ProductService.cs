@@ -15,11 +15,18 @@ namespace ProniaOnion.Persistence.Implementations.Services
     {
         private readonly IProductRepository _productRepository;
         private readonly IMapper _mapper;
+        private readonly ICategoryRepository _categoryRepository;
+        private readonly IColorRepository _colorRepository;
 
-        public ProductService(IProductRepository productRepository, IMapper mapper)
+        public ProductService(IProductRepository productRepository
+            ,ICategoryRepository categoryRepository
+            ,IMapper mapper
+            ,IColorRepository colorRepository)
         {
             _productRepository = productRepository;
             _mapper = mapper;
+            _categoryRepository = categoryRepository;
+            _colorRepository = colorRepository;
         }
         public async Task<IEnumerable<ProductItemDto>> GetAllAsync(int page = 1, int take = 8)
         {
@@ -33,6 +40,16 @@ namespace ProniaOnion.Persistence.Implementations.Services
            var product =_mapper.Map<GetProductDto>(await _productRepository.GetByIdAsync(id, "Category", "ProductColors.Color"));
             if (product is null) throw new Exception("Not Exits");
             return product;
+        }
+
+        public async Task CreateAsync(CreateProductDto productDto)
+        {
+            if (!await _categoryRepository.AnyAsync(c => c.Id == productDto.CategoryId))
+                throw new Exception("category does not exists");
+
+            //if (!await _colorRepository.AnyAsync(c => !productDto.ColorIds.Contains(c.Id)));
+
+
         }
     }
 }
